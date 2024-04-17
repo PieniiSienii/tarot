@@ -1,33 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* src/app/global.css */
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Päivitetty sivupalkin tyylit */
+.sidebar {
+  width: 150px; /* Leveys voi olla mikä tahansa haluamasi */
+  height: 100%; /* Sivupalkin korkeus täyttää koko sivun korkeuden */
+  background-color: rgb(221, 56, 226); /* Sivupalkin taustaväri vihreä */
+  color: white;
+  overflow-y: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.sidebar-content {
+  padding: 20px; /* Sisällön sisäinen korkeus täyttää sivupalkin korkeuden */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.sidebar h2 {
+  margin-bottom: 20px; /* Lisää väliä otsikon ja listan välille */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.sidebar ul {
+  list-style-type: none; /* Poistaa luettelon pisteen */
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 30px; /* Lisää väliä listaelementtien välille */
 }
